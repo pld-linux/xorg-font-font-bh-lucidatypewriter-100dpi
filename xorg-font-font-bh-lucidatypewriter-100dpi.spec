@@ -1,12 +1,12 @@
 Summary:	bh-lucidatypewriter-100dpi font
 Summary(pl):	Font bh-lucidatypewriter-100dpi
 Name:		xorg-font-font-bh-lucidatypewriter-100dpi
-Version:	0.99.2
+Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-bh-lucidatypewriter-100dpi-%{version}.tar.bz2
-# Source0-md5:	17ac22e593fb2c1e7454035fd29552c9
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-bh-lucidatypewriter-100dpi-%{version}.tar.bz2
+# Source0-md5:	c44d3f730564da465993e9292a33c235
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
