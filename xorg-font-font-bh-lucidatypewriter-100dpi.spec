@@ -1,12 +1,12 @@
 Summary:	Bigelow & Holmes Lucida Typewriter 100dpi bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe 100dpi Bigelow & Holmes Lucida Typewriter
 Name:		xorg-font-font-bh-lucidatypewriter-100dpi
-Version:	1.0.2
+Version:	1.0.3
 Release:	1
 License:	MIT
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-bh-lucidatypewriter-100dpi-%{version}.tar.bz2
-# Source0-md5:	6bb4ce98da5aadae91101484b1de9ea8
+# Source0-md5:	c8b73a53dcefe3e8d3907d3500e484a9
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-font-font-util >= 1.1.1
+BuildRequires:	xorg-font-font-util >= 1.2
 BuildRequires:	xorg-util-util-macros >= 1.3
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/100dpi
