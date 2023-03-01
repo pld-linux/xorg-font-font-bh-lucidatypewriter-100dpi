@@ -1,21 +1,23 @@
 Summary:	Bigelow & Holmes Lucida Typewriter 100dpi bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe 100dpi Bigelow & Holmes Lucida Typewriter
 Name:		xorg-font-font-bh-lucidatypewriter-100dpi
-Version:	1.0.3
-Release:	2
+Version:	1.0.4
+Release:	1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/individual/font/font-bh-lucidatypewriter-100dpi-%{version}.tar.bz2
-# Source0-md5:	c8b73a53dcefe3e8d3907d3500e484a9
-URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+Source0:	https://xorg.freedesktop.org/releases/individual/font/font-bh-lucidatypewriter-100dpi-%{version}.tar.xz
+# Source0-md5:	6a92a475ede5ac29b76b1b38d6916e74
+URL:		https://xorg.freedesktop.org/
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-font-font-util >= 1.2
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-font-font-util >= 1.4
+BuildRequires:	xorg-util-util-macros >= 1.20
+BuildRequires:	xz
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/100dpi
 # contains useful aliases for these fonts
@@ -45,8 +47,10 @@ ISO-8859-13, ISO-8859-14 i ISO-8859-15.
 %{__autoconf}
 %{__automake}
 %configure \
+%if "%{_gnu}" != "-gnux32"
 	--build=%{_host} \
 	--host=%{_host} \
+%endif
 	--with-fontdir=%{_fontsdir}/100dpi
 
 %{__make}
@@ -68,5 +72,5 @@ fontpostinst 100dpi
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %{_fontsdir}/100dpi/lut*.pcf.gz
